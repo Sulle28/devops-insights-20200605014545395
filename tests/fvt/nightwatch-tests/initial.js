@@ -17,13 +17,13 @@ module.exports = {
         await demodoi.navigate().waitForElementVisible('@inputText');
 
         await demodoi.setValue('@inputText', [
-            '78641',
+            '3214',
             browser.Keys.ENTER
           ]);
     
         await demodoi.waitForElementVisible('@table');
 
-        cityName.expect.element('@firstApp').text.to.equal('Leander');
+        cityName.expect.element('@firstApp').text.to.equal('Hamilton');
     },
 
     'Navigate to the DemoDOI - invalid zip': async (browser) => {
@@ -32,7 +32,7 @@ module.exports = {
         await demodoi.navigate().waitForElementVisible('@inputText');
 
         await demodoi.setValue('@inputText', [
-            '90000',
+            '0000',
             browser.Keys.ENTER
           ]);
     
@@ -47,7 +47,7 @@ module.exports = {
         await demodoi.navigate().waitForElementVisible('@inputText');
 
         await demodoi.setValue('@inputText', [
-            'ABCDE',
+            'HAMI',
             browser.Keys.ENTER
           ]);
     
