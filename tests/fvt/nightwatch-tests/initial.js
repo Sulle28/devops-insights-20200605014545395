@@ -10,7 +10,7 @@ module.exports = {
         .end(done);
     },
 
-    'Navigate to the DemoDOI - valid zip': async (browser) => {
+    'valid zip': async (browser) => {
         const demodoi = browser.page.demodoi();
         const { cityName } = demodoi.section;
     
@@ -26,7 +26,7 @@ module.exports = {
         cityName.expect.element('@firstApp').text.to.equal('Hamilton');
     },
 
-    'Navigate to the DemoDOI - invalid zip': async (browser) => {
+    'invalid zip': async (browser) => {
         const demodoi = browser.page.demodoi();
     
         await demodoi.navigate().waitForElementVisible('@inputText');
@@ -41,7 +41,7 @@ module.exports = {
         demodoi.expect.element('@cityNotFound').text.to.equal('city not found');
     },
 
-    'Navigate to the DemoDOI - invalid input': async (browser) => {
+    'invalid input': async (browser) => {
         const demodoi = browser.page.demodoi();
     
         await demodoi.navigate().waitForElementVisible('@inputText');

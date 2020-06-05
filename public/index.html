@@ -63,15 +63,14 @@
         .setLngLat([174.789978, -41.312351])
         .addTo(map);
       // Add listeners to all markers
-      var input = document.getElementById("usr")
       auckland.getElement().addEventListener("click", function (e) {
-        input.setAttribute("value", "1010")
+        document.getElementById("usr").setAttribute("value", "1010")
       });
       hamilton.getElement().addEventListener("click", function (e) {
-        input.setAttribute("value", "3214")
+        document.getElementById("usr").setAttribute("value", "3214")
       });
       wellington.getElement().addEventListener("click", function (e) {
-        input.setAttribute("value", "6021")
+        document.getElementById("usr").setAttribute("value", "6021")
       });
     </script>
   </body>
